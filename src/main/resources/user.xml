@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user valid="true">
+	<email>jchen@contoso.com</email>
+	<password>Welcome@123</password>
+	<addressList>
+		<address>
+			<city>Allahabad</city>
+			<pin>211011</pin>
+		</address>
+		<address>
+			<city>Noida</city>
+			<pin>201307</pin>
+		</address>
+	</addressList>
+</user>

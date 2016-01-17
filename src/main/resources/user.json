@@ -1,0 +1,14 @@
+{
+	"valid": "true",
+	"email": "jchen@contoso.com",
+	"password": "Welcome@123",
+	"address": [
+		{
+			"city": "Allahabad",
+			"pin": "211011"
+		}, {
+			"city": "Noida",
+			"pin": "201307"
+		}
+	]
+}
