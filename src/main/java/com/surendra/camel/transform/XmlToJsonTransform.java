@@ -10,7 +10,6 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.jackson.JacksonDataFormat;
 import org.apache.camel.converter.jaxb.JaxbDataFormat;
 import org.apache.camel.impl.DefaultCamelContext;
-import org.apache.camel.spi.DataFormat;
 
 import com.surendra.camel.entity.User;
 
@@ -22,7 +21,7 @@ public class XmlToJsonTransform {
 
 	/**
 	 * @param args
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
 		CamelContext context = new DefaultCamelContext();
@@ -30,12 +29,10 @@ public class XmlToJsonTransform {
 			
 			@Override
 			public void configure() throws Exception {
-				final DataFormat jaxb = new JaxbDataFormat(JAXBContext.newInstance(User.class));
-				final JacksonDataFormat json = new JacksonDataFormat();
-				json.setPrettyPrint(true);
-				
 				from("file:./src/main/resources?fileName=user.xml&noop=true")
-					.unmarshal(jaxb).marshal(json).to("file:./target?fileName=user_generated.json");
+					.unmarshal(new JaxbDataFormat(JAXBContext.newInstance(User.class)))
+					.marshal(new JacksonDataFormat())
+						.to("file:./target?fileName=user_generated.json");
 			}
 		});
 		
