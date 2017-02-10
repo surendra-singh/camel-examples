@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ 
+     <class name="com.surendra.camel.entity.Availability" schema="clavisinsight" table="availability">
+ 
+        <id name="id">
+            <generator class="native"/>
+        </id>
+ 
+        <property name="url" />
+        <property name="location" />
+        <property name="zip"/>
+        <property name="availability" />
+        <property name="avail" />
+        <property name="asin"/>
+        <property name="productTitle" />
+        <property name="upc" />
+        <property name="category"/>
+        <property name="subcategory1" />
+        <property name="Subcategory2" />
+        <property name="price"/>
+         <property name="brand" />
+        <property name="seller"/>
+    </class>
+ 
+</hibernate-mapping>

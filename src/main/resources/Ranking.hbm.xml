@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ 
+     <class name="com.surendra.camel.entity.Ranking" schema="clavisinsight" table="category_ranking">
+ 
+        <id name="id">
+            <generator class="native"/>
+        </id>
+ 
+        <property name="report_date" />
+        <property name="online_store" />
+        <property name="trusted_rpc"/>
+        <property name="trusted_product_description" />
+        <property name="post_code" />
+        <property name="location"/>
+        <property name="rank" />
+        <property name="depth" />
+        <property name="brand" />
+        <property name="seller" />
+        <property name="found_at_url"/>
+        <property name="product_url" />
+
+    </class>
+ 
+</hibernate-mapping>
